@@ -1,11 +1,22 @@
 [
-    {
-        "title": "how to eat healthy?",
-        "answer": "Do no eat junk food!"
-    },
-
-    {
-        "title": "how to relax?",
-        "answer": "Go to grab a coffee"
-    }
+	{
+		"seminar_id":691,
+		"date":"2024\/04\/25 14:00:00",
+		"title":"DESI & CSST Era For Galaxy Evolution",
+		"abstract":"The galaxy is surrounded by large amouts of gas in the outskirt, which is known as the circumgalactic medium (CGM). The CGM, as the bridge connecting the central galaxy and the large-scale environment, is playing a critical role in galaxy evolution. DESI (Dark Energy Spectroscopic Instrument) is already starting its 5-year spectroscopic survey, which will ultimately collect more than 30 million spectra. CSST (China Space Station Telescope) is an image survey covering > 17000 square degrees. The combination of the image and spectra will broaden the constraint on the galaxy evolution. In this talk, I will present the detection of the CGM via emission lines using SDSS and DESI-EDR spectra, and will also present how the 5-year DESI data is going to deepen the study of the CGM. I will also introduce the dwarf galaxy search using both CSST and DESI, to constrain the galaxy evolution at the low mass end. ",
+		"author":"Huanian Zhang",
+		"location":"Praha Sporilov 101",
+		"comment":"",
+		"url":"https:\/\/asis.asu.cas.cz\/seminars\/view\/691"
+	},
+	
+	{
+		"seminar_id":693,
+		"date":"2024\/05\/09 14:00:00",
+		"title":"Joint Journal Club",
+		"abstract":"Two papers will be presented: TBD",
+		"author":"TBD",
+		"location":"Sporilov and Zoom",
+		"comment":"Connection via Zoom:\n\nMeeting ID: 87681181091\nPassword: 7706\nScheduled time: 09\/05\/2024 10:30 CEST (08:30 UTC)\nDuration: 120 minutes\nMeeting link: https:\/\/us02web.zoom.us\/j\/87681181091?pwd=L0Rzc09RZ3ZlN2FxUUlOSCtDN3VsUT09","url":"https:\/\/asis.asu.cas.cz\/seminars\/view\/693"
+	}
 ]
