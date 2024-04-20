@@ -1,5 +1,11 @@
-{
-    "id": 1,
-    "name": "John Doe",
-    "age": 12
-}
+[
+    {
+        "title": "how to eat healthy?",
+        "answer": "Do no eat junk food!"
+    },
+
+    {
+        "title": "how to relax?",
+        "answer": "Go to grab a coffee"
+    }
+]
