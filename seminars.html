@@ -24,17 +24,17 @@
                     //You can play here doing a loop and using de iterator "i" for make it at one.
                   //Example: document.querySelector(".faq--0" + i + "h1").innerHTML = json[0].title;
                     //Example: document.querySelector(".faq--0" + i + " p").innerHTML = json[0].answer;
-                    document.querySelector(".sem1 h1").innerHTML = json[0].title;
+                    document.querySelector(".sem1 tit").innerHTML = json[0].title;
                     document.querySelector(".sem1 date").innerHTML = json[0].date;
-                    document.querySelector(".sem1 p").innerHTML = json[0].abstract;
+                    document.querySelector(".sem1 abs").innerHTML = json[0].abstract;
                     document.querySelector(".sem1 auth").innerHTML = json[0].author;
                     document.querySelector(".sem1 loc").innerHTML = json[0].location;
                     document.querySelector(".sem1 comment").innerHTML = json[0].comment;
                     document.querySelector(".sem1 web_link").innerHTML = json[0].url;
                     
-                    document.querySelector(".sem2 h1").innerHTML = json[1].title;
+                    document.querySelector(".sem2 tit").innerHTML = json[1].title;
                     document.querySelector(".sem2 date").innerHTML = json[1].date;
-                    document.querySelector(".sem2 p").innerHTML = json[1].abstract;
+                    document.querySelector(".sem2 abs").innerHTML = json[1].abstract;
                     document.querySelector(".sem2 auth").innerHTML = json[1].author;
                     document.querySelector(".sem2 loc").innerHTML = json[1].location;
                     document.querySelector(".sem2 comment").innerHTML = json[1].comment;
@@ -48,13 +48,13 @@
     <div class="main container">
 
         <section class="sem1">
-            <h1></h1>
+            <h1><tit></tit></h1>
             <date></date>
-            <p><font color="brown"></font></p>
-            <auth></auth>
-            <loc></loc>
-            <comment></comment>
-            <web_link></web_link>
+            <p><font color="brown"><abs></abs></font></p>
+            <p><auth></auth></p>
+            <p><loc></loc></p>
+            <p><comment></comment></p>
+            <p><web_link></web_link></p>
         </section>
 
         <section class="sem2">
