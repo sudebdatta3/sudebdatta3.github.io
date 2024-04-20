@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="faq.json" type="application/json"></script>
+    <script src="asis_php.json" type="application/json"></script>
     <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
     <!-- <script src="./main.js"></script> -->
     <title>Seminars</title>
@@ -15,7 +15,7 @@
         //Event on ready DOM
         document.addEventListener("DOMContentLoaded", function () {
             //Fetch data
-            fetch('./faq.json')
+            fetch('./asis_php.json')
                 .then((response) => response.json())
                 .then((json) => {
                     //Then json info is here
