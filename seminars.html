@@ -6,7 +6,7 @@
     <script src="faq.json" type="application/json"></script>
     <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
     <!-- <script src="./main.js"></script> -->
-    <title>FAQ</title>
+    <title>Seminars</title>
 </head>
 
 <body>
@@ -24,24 +24,30 @@
                     //You can play here doing a loop and using de iterator "i" for make it at one.
                   //Example: document.querySelector(".faq--0" + i + "h1").innerHTML = json[0].title;
                     //Example: document.querySelector(".faq--0" + i + " p").innerHTML = json[0].answer;
-                    document.querySelector(".faq--01 h1").innerHTML = json[0].title;
-                    document.querySelector(".faq--01 p").innerHTML = json[0].answer;
-                    document.querySelector(".faq--02 h1").innerHTML = json[1].title;
-                    document.querySelector(".faq--02 p").innerHTML = json[1].answer;
+                    document.querySelector(".sem1 h1").innerHTML = json[0].title;
+                    document.querySelector(".sem1 date").innerHTML = json[0].date;
+                    document.querySelector(".sem1 p").innerHTML = json[0].abstract;
+                    document.querySelector(".sem1 auth").innerHTML = json[0].author;
+                    document.querySelector(".sem1 loc").innerHTML = json[0].location;
+                    document.querySelector(".sem2 h1").innerHTML = json[1].title;
+                    document.querySelector(".sem2 p").innerHTML = json[1].abstract;
                 })
         });
     </script>
     <!-- END JS-->
 
     <!-- START Content HTML -->
-    <div class="faq--container">
+    <div class="main container">
 
-        <section class="faq--01">
+        <section class="sem1">
             <h1></h1>
+            <date></date>
             <p></p>
+            <auth></auth>
+            <loc></loc>
         </section>
 
-        <section class="faq--02">
+        <section class="sem2">
             <h1></h1>
             <p></p>
         </section>
