@@ -29,8 +29,8 @@
                 });
         
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector(".sem1 ver").innerHTML = data[0].version;
-            document.querySelector(".sem1 typ").innerHTML = data[0].type;
+            document.querySelector(".sem1 ver").innerHTML = data.version;
+            document.querySelector(".sem1 typ").innerHTML = data.type;
             //document.querySelector(".sem1 tit").innerHTML = data[0].title;
             //document.querySelector(".sem1 date").innerHTML = data[0].date;
             //document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
@@ -53,8 +53,8 @@
     <div class="main container">
 
         <section class="sem1">
-            <p>Version: <ver></ver></p>
-            <h1>Type: <font color="brown"><typ></typ></font></h1>
+            <p>: <ver></ver></p>
+            <h1>: <font color="brown"><typ></typ></font></h1>
           <!--  <p>Date: <date></date></p>
             <h1>Title: <font color="brown"><tit></tit></font></h1>
             <p>Speaker: <auth></auth></p>
