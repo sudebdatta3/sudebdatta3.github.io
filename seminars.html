@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="asis_php.json" type="application/json"></script>
+    <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
+    <!-- <script src="./main.js"></script> -->
+    <title>Seminars</title>
+</head>
+
+<body>
+    <!-- START JS: This code can go in a main.js file located in the same folder, calling in the head <script src="./main.js"></script> -->
+    <script>
+      const getJSON = async url => {
+      const response = await fetch(url);
+      return response.json(); // get JSON from the response 
+    }
+
+    console.log("Fetching data...");
+    getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json")
+    .then(data => console.log(data));
+    </script>
+  
+  </body>
+
+</html>
