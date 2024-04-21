@@ -12,15 +12,72 @@
 <body>
     <!-- START JS: This code can go in a main.js file located in the same folder, calling in the head <script src="./main.js"></script> -->
     <script>
-      const getJSON = async url => {
-      const response = await fetch(url);
-      return response.json(); // get JSON from the response 
-    }
+        const getJSON = async url => {
+            const response = await fetch(url);
+            if(!response.ok) // check if response worked (no 404 errors etc...)
+            throw new Error(response.statusText);
 
-    console.log("Fetching data...");
-    getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json")
-    .then(data => console.log(data));
+            const data = response.json(); // get JSON from the response
+            return data; // returns a promise, which resolves to this data value
+        }
+
+        console.log("Fetching data...");
+        getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json").then(data => {
+            console.log(data);
+            }).catch(error => {
+                console.error(error);
+                });
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".sem1 ver").innerHTML = data[0].version;
+            document.querySelector(".sem1 typ").innerHTML = data[0].type;
+            //document.querySelector(".sem1 tit").innerHTML = data[0].title;
+            //document.querySelector(".sem1 date").innerHTML = data[0].date;
+            //document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
+            //document.querySelector(".sem1 auth").innerHTML = data[0].author;
+            //document.querySelector(".sem1 loc").innerHTML = data[0].location;
+            //document.querySelector(".sem1 comment").innerHTML = data[0].comment;
+            //document.querySelector(".sem1 web_link").innerHTML = data[0].url;
+                    
+            //document.querySelector(".sem2 tit").innerHTML = data[1].title;
+            //document.querySelector(".sem2 date").innerHTML = data[1].date;
+            //document.querySelector(".sem2 abs").innerHTML = data[1].abstract;
+            //document.querySelector(".sem2 auth").innerHTML = data[1].author;
+            //document.querySelector(".sem2 loc").innerHTML = data[1].location;
+            //document.querySelector(".sem2 comment").innerHTML = data[1].comment;
+            //document.querySelector(".sem2 web_link").innerHTML = data[1].url;
+            })
     </script>
+    <!-- END JS-->
+        <!-- START Content HTML -->
+    <div class="main container">
+
+        <section class="sem1">
+            <p>Version: <ver></ver></p>
+            <h1>Type: <font color="brown"><typ></typ></font></h1>
+          <!--  <p>Date: <date></date></p>
+            <h1>Title: <font color="brown"><tit></tit></font></h1>
+            <p>Speaker: <auth></auth></p>
+            <p>Abstract: <abs></abs></p>
+            <p><loc></loc></p>
+            <p><comment></comment></p>
+            <p><web_link></web_link></p>
+            <p><a href=web_link target="_blank"><web_link></web_link></a></p>
+        </section>
+
+        <section class="sem2">
+            <p>Date: <date></date></p>
+            <h1>Title: <font color="brown"><tit></tit></font></h1>
+            <p>Speaker: <auth></auth></p>
+            <p>Abstract: <abs></abs></p>
+            <p><loc></loc></p>
+            <p><comment></comment></p>
+            <p><web_link></web_link></p>
+            <p><a href=web_link target="_blank"><web_link></web_link></a></p> -->
+        </section>
+
+    </div>
+    <!-- END Content HTML -->
   
   </body>
 
