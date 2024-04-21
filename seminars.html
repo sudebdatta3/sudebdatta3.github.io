@@ -21,16 +21,17 @@
             return data; // returns a promise, which resolves to this data value
         }
 
-        console.log("Fetching data...");
-        getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json").then(data => {
-            console.log(data);
-            }).catch(error => {
-                console.error(error);
-                });
-        
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector(".sem1 ver").innerHTML = data.version;
-            document.querySelector(".sem1 typ").innerHTML = data.type;
+            getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json").then(data => {
+                console.log(data);
+                document.querySelector(".sem1 ver").innerHTML = data.version;
+                document.querySelector(".sem1 typ").innerHTML = data.type;
+            //}).catch(error => {
+                //console.error(error);
+                })
+        
+        
+
             //document.querySelector(".sem1 tit").innerHTML = data[0].title;
             //document.querySelector(".sem1 date").innerHTML = data[0].date;
             //document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
@@ -46,7 +47,7 @@
             //document.querySelector(".sem2 loc").innerHTML = data[1].location;
             //document.querySelector(".sem2 comment").innerHTML = data[1].comment;
             //document.querySelector(".sem2 web_link").innerHTML = data[1].url;
-            })
+            });
     </script>
     <!-- END JS-->
         <!-- START Content HTML -->
