@@ -13,7 +13,11 @@
     <!-- START JS: This code can go in a main.js file located in the same folder, calling in the head <script src="./main.js"></script> -->
     <script>
         //Event on ready DOM
-        document.addEventListener("DOMContentLoaded", function () {
+
+
+
+        
+            document.addEventListener("DOMContentLoaded", function () {
             //Fetch data
             //https://asis.asu.cas.cz/asis.php?m=seminars-pub&a=seminars-list&department=GPS&year=2024/asis.php.json
             fetch('https://asis.asu.cas.cz/asis.php?m=seminars-pub&a=seminars-list&department=GPS&year=2024')
@@ -41,7 +45,7 @@
                     document.querySelector(".sem2 comment").innerHTML = json[1].comment;
                     document.querySelector(".sem2 web_link").innerHTML = json[1].url;
                 })
-        });
+        }); -->
     </script>
     <!-- END JS-->
 
