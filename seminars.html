@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json" type="application/json"></script>
+    <script src="https://asis.asu.cas.cz/asis.php?m=seminars-pub&a=seminars-list&department=GPS&year=2024" type="application/json"></script>
     <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
     <!-- <script src="./main.js"></script> -->
     <title>Seminars</title>
@@ -22,31 +22,25 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            getJSON("https://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=json").then(data => {
+            getJSON("https://asis.asu.cas.cz/asis.php?m=seminars-pub&a=seminars-list&department=GPS&year=2024").then(data => {
                 console.log(data);
-                document.querySelector(".sem1 ver").innerHTML = data.version;
-                document.querySelector(".sem1 typ").innerHTML = data.type;
-            //}).catch(error => {
-                //console.error(error);
-                })
-        
-        
-
-            //document.querySelector(".sem1 tit").innerHTML = data[0].title;
-            //document.querySelector(".sem1 date").innerHTML = data[0].date;
-            //document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
-            //document.querySelector(".sem1 auth").innerHTML = data[0].author;
-            //document.querySelector(".sem1 loc").innerHTML = data[0].location;
-            //document.querySelector(".sem1 comment").innerHTML = data[0].comment;
-            //document.querySelector(".sem1 web_link").innerHTML = data[0].url;
+                
+                document.querySelector(".sem1 tit").innerHTML = data[0].title;
+                document.querySelector(".sem1 date").innerHTML = data[0].date;
+                document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
+                document.querySelector(".sem1 auth").innerHTML = data[0].author;
+                document.querySelector(".sem1 loc").innerHTML = data[0].location;
+                document.querySelector(".sem1 comment").innerHTML = data[0].comment;
+                document.querySelector(".sem1 web_link").innerHTML = data[0].url;
                     
-            //document.querySelector(".sem2 tit").innerHTML = data[1].title;
-            //document.querySelector(".sem2 date").innerHTML = data[1].date;
-            //document.querySelector(".sem2 abs").innerHTML = data[1].abstract;
-            //document.querySelector(".sem2 auth").innerHTML = data[1].author;
-            //document.querySelector(".sem2 loc").innerHTML = data[1].location;
-            //document.querySelector(".sem2 comment").innerHTML = data[1].comment;
-            //document.querySelector(".sem2 web_link").innerHTML = data[1].url;
+                document.querySelector(".sem2 tit").innerHTML = data[1].title;
+                document.querySelector(".sem2 date").innerHTML = data[1].date;
+                document.querySelector(".sem2 abs").innerHTML = data[1].abstract;
+                document.querySelector(".sem2 auth").innerHTML = data[1].author;
+                document.querySelector(".sem2 loc").innerHTML = data[1].location;
+                document.querySelector(".sem2 comment").innerHTML = data[1].comment;
+                document.querySelector(".sem2 web_link").innerHTML = data[1].url;
+                })
             });
     </script>
     <!-- END JS-->
@@ -54,9 +48,7 @@
     <div class="main container">
 
         <section class="sem1">
-            <p>: <ver></ver></p>
-            <h1>: <font color="brown"><typ></typ></font></h1>
-          <!--  <p>Date: <date></date></p>
+            <p>Date: <date></date></p>
             <h1>Title: <font color="brown"><tit></tit></font></h1>
             <p>Speaker: <auth></auth></p>
             <p>Abstract: <abs></abs></p>
@@ -74,7 +66,7 @@
             <p><loc></loc></p>
             <p><comment></comment></p>
             <p><web_link></web_link></p>
-            <p><a href=web_link target="_blank"><web_link></web_link></a></p> -->
+            <p><a href=web_link target="_blank"><web_link></web_link></a></p>
         </section>
 
     </div>
