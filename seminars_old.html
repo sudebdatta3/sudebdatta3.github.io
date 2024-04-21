@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="asis_php.json" type="application/json"></script>
+    <script src="https://github.com/sudebdatta3/sudebdatta3.github.io/blob/c18b6ebe88d1941cc30bfe1e753fd0d65e91512b/asis_php.json" type="application/json"></script>
     <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
     <!-- <script src="./main.js"></script> -->
     <title>Seminars</title>
@@ -11,6 +11,82 @@
 
 <body>
     <!-- START JS: This code can go in a main.js file located in the same folder, calling in the head <script src="./main.js"></script> -->
+    <script>
+        const getJSON = async url => {
+            const response = await fetch(url);
+            if(!response.ok) // check if response worked (no 404 errors etc...)
+            throw new Error(response.statusText);
+
+            const data = response.json(); // get JSON from the response
+            return data; // returns a promise, which resolves to this data value
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            getJSON("https://github.com/sudebdatta3/sudebdatta3.github.io/blob/c18b6ebe88d1941cc30bfe1e753fd0d65e91512b/asis_php.json").then(data => {
+                console.log(data);
+                
+                document.querySelector(".sem1 tit").innerHTML = data[0].title;
+                document.querySelector(".sem1 date").innerHTML = data[0].date;
+                document.querySelector(".sem1 abs").innerHTML = data[0].abstract;
+                document.querySelector(".sem1 auth").innerHTML = data[0].author;
+                document.querySelector(".sem1 loc").innerHTML = data[0].location;
+                document.querySelector(".sem1 comment").innerHTML = data[0].comment;
+                document.querySelector(".sem1 web_link").innerHTML = data[0].url;
+                    
+                document.querySelector(".sem2 tit").innerHTML = data[1].title;
+                document.querySelector(".sem2 date").innerHTML = data[1].date;
+                document.querySelector(".sem2 abs").innerHTML = data[1].abstract;
+                document.querySelector(".sem2 auth").innerHTML = data[1].author;
+                document.querySelector(".sem2 loc").innerHTML = data[1].location;
+                document.querySelector(".sem2 comment").innerHTML = data[1].comment;
+                document.querySelector(".sem2 web_link").innerHTML = data[1].url;
+                })
+            });
+    </script>
+    <!-- END JS-->
+        <!-- START Content HTML -->
+    <div class="main container">
+
+        <section class="sem1">
+            <p>Date: <date></date></p>
+            <h1>Title: <font color="brown"><tit></tit></font></h1>
+            <p>Speaker: <auth></auth></p>
+            <p>Abstract: <abs></abs></p>
+            <p><loc></loc></p>
+            <p><comment></comment></p>
+            <p><web_link></web_link></p>
+            <!-- <p><a v-bind:href="'web_link'">link.</a></p> -->
+        </section>
+
+        <p>------------------------------------------------------------------</p>
+        <section class="sem2">
+            <p>Date: <date></date></p>
+            <h1>Title: <font color="brown"><tit></tit></font></h1>
+            <p>Speaker: <auth></auth></p>
+            <p>Abstract: <abs></abs></p>
+            <p><loc></loc></p>
+            <p><comment></comment></p>
+            <p><web_link></web_link></p>
+            <!-- <p><a v-bind:href=web_link target="_blank"><web_link></web_link></a></p> -->
+        </section>
+
+    </div>
+    <!-- END Content HTML -->
+  
+  </body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="asis_php.json" type="application/json"></script>
+    <title>Seminars</title>
+</head>
+
+<body>
     <script>
         //Event on ready DOM
 
@@ -47,9 +123,7 @@
                 })
         });
     </script>
-    <!-- END JS-->
 
-    <!-- START Content HTML -->
     <div class="main container">
 
         <section class="sem1">
@@ -75,7 +149,6 @@
         </section>
 
     </div>
-    <!-- END Content HTML -->
 </body>
 
-</html>
+</html> -->
